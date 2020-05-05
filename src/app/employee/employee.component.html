@@ -1,0 +1,27 @@
+<p>employee works!</p>
+<div>
+    {{text}}
+</div>
+<form id="employee-form" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+<div class="form-group">
+    <label class="center-block">First Name:
+    <input class="form-control" formControlName="name1">
+</label>
+<label class="center-block">Second Name:
+    <input class="form-control" formControlName="name2">
+</label>
+<label class="center-block">Salary:
+    <input class="form-control" formControlName="salary">
+</label>
+<label class="center-block">Street1:
+    <input class="form-control" formControlName="street1">
+</label>
+<label class="center-block">Street2:
+    <input class="form-control" formControlName="street2">
+</label>
+<label class="center-block">Location:
+    <input class="form-control" formControlName="location">
+</label>
+</div>
+<button type="submit" [disabled]="!employeeForm.valid" class="btn btn-success">Save</button>
+</form>
